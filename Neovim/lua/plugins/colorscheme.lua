@@ -6,7 +6,7 @@ return {
 		priority = 1000, -- load BEFORE UI plugins
 		config = function()
 			require("tokyonight").setup({
-				style = "moon", -- night | storm | moon | day
+				style = "night", -- night | storm | moon | day
 				transparent = false,
 				terminal_colors = true,
 				styles = {

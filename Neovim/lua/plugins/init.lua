@@ -12,64 +12,15 @@ require("lazy").setup({
 		{ import = "plugins.colorscheme" },
 		{ import = "plugins.kulala" },
 		{ import = "plugins.wakatime" },
-		{ import = "plugins.lazygit" },
+		{ import = "plugins.git" },
 		{ import = "plugins.dashboard" },
 		{ import = "plugins.formatter" },
-		-- Treesitter
-		{
-			"nvim-treesitter/nvim-treesitter",
-			build = ":TSUpdate",
-			config = function()
-				require("nvim-treesitter.configs").setup({
-					highlight = { enable = true },
-					ensure_installed = {
-						"cpp",
-						"c",
-						"lua",
-						"javascript",
-						"typescript",
-						"tsx",
-						"json",
-						"css",
-						"html",
-						"http",
-						"graphql",
-					},
-				})
-			end,
-		},
+		{ import = "plugins.explorer" },
+		{ import = "plugins.Copilot" },
+		{ import = "plugins.noice" },
+		{ import = "plugins.toggleterm" },
+		{ import = "plugins.treesitter" },
 
-		-- File explorer
-		-- nvim-tree
-		{
-			"nvim-tree/nvim-tree.lua",
-			dependencies = { "nvim-tree/nvim-web-devicons" },
-			config = function()
-				require("nvim-tree").setup({
-					filters = { dotfiles = false, git_ignored = false },
-				})
-			end,
-		},
-
-		--Oil.nvim
-		{
-			"stevearc/oil.nvim",
-			dependencies = { "nvim-tree/nvim-web-devicons" },
-			config = function()
-				require("oil").setup({
-					view_options = { show_hidden = true },
-				})
-			end,
-		},
-
-		-- Status line
-		{
-			"nvim-lualine/lualine.nvim",
-			dependencies = { "nvim-tree/nvim-web-devicons" },
-			config = function()
-				require("lualine").setup()
-			end,
-		},
 		--autoclosing tags for react
 		{
 			"windwp/nvim-ts-autotag",
@@ -98,106 +49,11 @@ require("lazy").setup({
 			},
 		},
 
-		-- Copilot core
-		{
-			"zbirenbaum/copilot.lua",
-			cmd = "Copilot",
-			event = "InsertEnter",
-			config = function()
-				require("copilot").setup({
-					suggestion = { enabled = false }, -- disable inline ghost text
-					panel = { enabled = false }, -- disable Copilot panel
-				})
-			end,
-		},
-
-		-- Bridge between Copilot and nvim-cmp
-		{
-			"zbirenbaum/copilot-cmp",
-			dependencies = { "zbirenbaum/copilot.lua" },
-			config = function()
-				require("copilot_cmp").setup()
-			end,
-		},
-
-		-- Copilot Chat
-		{
-			"CopilotC-Nvim/CopilotChat.nvim",
-			dependencies = {
-				{ "zbirenbaum/copilot.lua" }, -- you already have this
-				{ "nvim-lua/plenary.nvim" },
-			},
-			build = "make tiktoken", -- required for token counting
-			opts = {
-				debug = false, -- set true to see logs if something breaks
-				-- You can also configure window layout here
-				window = {
-					layout = "vertical", -- or 'vertical', 'horizontal'
-					-- width = 0.8,
-					-- height = 0.8,
-					width = 40,
-				},
-			},
-			config = function(_, opts)
-				require("CopilotChat").setup(opts)
-			end,
-		},
-
-		-- Git integration
-		{
-			"lewis6991/gitsigns.nvim",
-			config = function()
-				require("gitsigns").setup({
-					signs = {
-						add = { text = "│" },
-						change = { text = "│" },
-						delete = { text = "_" },
-						topdelete = { text = "‾" },
-						changedelete = { text = "~" },
-					},
-					current_line_blame = true, -- Show blame on current line
-					current_line_blame_opts = {
-						delay = 500, -- Show after 0.5s
-					},
-				})
-			end,
-		},
-
 		-- Other plugins
 		{
 			"akinsho/bufferline.nvim",
 			config = function()
 				require("bufferline").setup()
-			end,
-		},
-		{
-			"folke/noice.nvim",
-			dependencies = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify" },
-			config = function()
-				require("noice").setup({
-					lsp = {
-						override = {
-							["vim.lsp.util.convert_input_to_markdown_lines"] = true,
-							["vim.lsp.util.stylize_markdown"] = true,
-							["cmp.entry.get_documentation"] = true,
-						},
-					},
-					presets = {
-						bottom_search = true,
-						command_palette = false,
-						long_message_to_split = true,
-						inc_rename = false,
-						lsp_doc_border = true,
-					},
-				})
-				local notify = require("notify")
-				notify.setup({
-					stages = "fade_in_slide_out",
-					timeout = 3000,
-					background_colour = "#000000",
-					render = "minimal",
-				})
-				vim.notify = notify
 			end,
 		},
 		{
@@ -234,31 +90,7 @@ require("lazy").setup({
 			end,
 		},
 		{ "williamboman/mason-lspconfig.nvim" },
-		-- LSP setup
-		--   {
-		--     "neovim/nvim-lspconfig",
-		--     dependencies = {
-		--       "williamboman/mason.nvim",
-		--       "williamboman/mason-lspconfig.nvim",
-		--     },
-		--     config = function()
-		--       local mason_lspconfig = require("mason-lspconfig")
-		--       local lspconfig = require("lspconfig")
-		--
-		--       mason_lspconfig.setup {
-		--         ensure_installed = { "clangd", "lua_ls", "pyright","ts_ls","tailwindcss","eslint" },
-		--         automatic_installation = true,
-		--       }
-		--
-		--       -- Manually loop over installed servers
-		-- for _, server in ipairs(mason_lspconfig.get_installed_servers()) do
-		--   lspconfig[server].setup {
-		--     capabilities = require("cmp_nvim_lsp").default_capabilities(),
-		--   }
-		-- end
-		--
-		--     end
-		--   },
+
 		-- LSP setup
 		{
 			"neovim/nvim-lspconfig",
@@ -282,27 +114,6 @@ require("lazy").setup({
 							})
 						end,
 					},
-				})
-			end,
-		},
-
-		{
-			"akinsho/toggleterm.nvim",
-			version = "*",
-			config = function()
-				require("toggleterm").setup({
-					shell = "/usr/bin/zsh", -- keep your preferred shell
-					open_mapping = [[<C-\>]], -- easier than <leader>`
-					insert_mappings = true,
-					direction = "horizontal", -- default
-					float_opts = { border = "curved" },
-					size = function(term)
-						if term.direction == "horizontal" then
-							return 15
-						elseif term.direction == "vertical" then
-							return vim.o.columns * 0.4
-						end
-					end,
 				})
 			end,
 		},
