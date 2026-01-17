@@ -20,6 +20,7 @@ require("lazy").setup({
 		{ import = "plugins.noice" },
 		{ import = "plugins.toggleterm" },
 		{ import = "plugins.treesitter" },
+		{ import = "plugins.smear_cursor" },
 
 		--autoclosing tags for react
 		{
