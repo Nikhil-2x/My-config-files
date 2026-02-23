@@ -1,0 +1,142 @@
+{
+  "code-runner.clearPreviousOutput": true,
+  "code-runner.runInTerminal": true,
+  "workbench.startupEditor": "none",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.sideBar.location": "right",
+  "workbench.activityBar.location": "top",
+  "workbench.list.smoothScrolling": true,
+  "wakatime.align": "right",
+  "explorer.confirmDelete": false,
+  "editor.smoothScrolling": true,
+  "editor.mouseWheelZoom": true,
+  "editor.formatOnPaste": true,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.fontLigatures": true,
+
+  "[python]": {
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.defaultColorDecorators": "never",
+    "editor.formatOnType": true,
+    "editor.wordBasedSuggestions": "off",
+    "editor.defaultFormatter": "ms-python.python"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "notebook.lineNumbers": "on",
+  "emmet.includeLanguages": {
+    "django-html": "html",
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
+  },
+  "workbench.editorAssociations": {
+    "*.copilotmd": "vscode.markdown.preview.editor",
+    "*.sqlite3": "default",
+    "*.asm": "default",
+    "*.glb": "default",
+    "*.docx": "default"
+  },
+  "css.lint.unknownAtRules": "ignore",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "html-css-class-completion.JavaScriptLanguages": [
+    "javascript",
+    "javascriptreact",
+    "typescriptreact"
+  ],
+  "files.exclude": {
+    "**/.git": false
+  },
+  "git.suggestSmartCommit": false,
+  "terminal.integrated.defaultProfile.windows": "Windows PowerShell",
+  "terminal.integrated.smoothScrolling": true,
+  "terminal.integrated.lineHeight": 1.6,
+  "python.createEnvironment.trigger": "off",
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "containers.containerClient": "com.microsoft.visualstudio.containers.docker",
+  "containers.orchestratorClient": "com.microsoft.visualstudio.orchestrators.dockercompose",
+  "files.associations": {
+    "*.jsx": "javascriptreact"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "java": false
+  },
+  "update.mode": "manual",
+
+  "glassit.alpha": 255,
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  // "[lua]": {
+  //   "editor.defaultFormatter": "yinfei.luahelper"
+  // },
+  "[lua]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  //Zen Mode:
+  "zenMode.fullScreen": false,
+  "zenMode.showTabs": "none",
+  "zenMode.centerLayout": false,
+  "zenMode.hideLineNumbers": false,
+  "window.menuBarVisibility": "toggle",
+  "window.titleBarStyle": "custom",
+
+  "editor.formatOnSave": true,
+  "editor.lineNumbers": "relative",
+  "extensions.autoUpdate": false,
+  // "editor.fontFamily": "\"FiraCode Nerd Font\", Consolas, \"Courier New\", monospace",
+  "editor.fontFamily": "JetBrainsMono Nerd Font Propo",
+  // "editor.fontFamily": "Monaspace Radon Frozen",
+
+  // "terminal.integrated.fontFamily": "FiraCode Nerd Font",
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Propo",
+
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "none",
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "remote.SSH.remotePlatform": {
+    "Omarchy": "linux"
+  },
+  "editor.cursorBlinking": "expand",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.tabs.defaultIcon": "github",
+  "workbench.colorTheme": "Ayu Mirage",
+  "editor.codeLensFontFamily": "JetBrainsMono Nerd Font Propo",
+  "editor.inlayHints.fontFamily": "'Monaspace Radon Frozen'",
+  "terminal.integrated.fontLigatures.enabled": true,
+  "scm.inputFontFamily": "",
+  "editor.allowVariableFontsInAccessibilityMode": true,
+  "editor.inlineSuggest.fontFamily": "'Monaspace Radon Frozen'",
+  "editor.fontVariations": true,
+  "debug.console.fontFamily": "'Monaspace Radon Frozen'",
+  "chat.mcp.gallery.enabled": true,
+  "editor.allowVariableLineHeights": false,
+  "editor.lineHeight": 30
+}

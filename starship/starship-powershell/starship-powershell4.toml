@@ -1,0 +1,25 @@
+palette = "dracula"
+
+[palettes.dracula]
+background = "#282A36"
+foreground = "#F8F8F2"
+purple = "#BD93F9"
+cyan = "#8BE9FD"
+green = "#50FA7B"
+pink = "#FF79C6"
+yellow = "#F1FA8C"
+red = "#FF5555"
+
+[character]
+success_symbol = "[❯](green)"
+error_symbol = "[❯](red)"
+
+[directory]
+style = "purple"
+
+[git_branch]
+style = "pink"
+
+[git_status]
+style = "yellow"
+
