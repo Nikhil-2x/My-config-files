@@ -1,7 +1,0 @@
-[2m2026-01-20T14:18:03.468375Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.
-[2m2026-01-21T23:45:02.131793Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.
-[2m2026-01-22T15:53:24.308218Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.
-[2m2026-01-24T18:37:36.755857Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m could not find expected ':' at line 17 column 3, while scanning a simple key at line 15 column 3
-[2m2026-01-24T18:37:52.404545Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m could not find expected ':' at line 17 column 3, while scanning a simple key at line 15 column 3
-[2m2026-01-29T19:27:15.666653Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m did not find expected ',' or ']' at line 233 column 17, while parsing a flow sequence at line 230 column 15
-[2m2026-02-12T17:43:53.234001Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m window_effects.focused_window.hide_title_bar: invalid type: string "enabled:true", expected struct HideTitleBarEffectConfig at line 67 column 21
