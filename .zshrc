@@ -7,17 +7,23 @@ fi
 
 source "${ZINIT_HOME}/zinit.zsh"
 
+autoload -Uz compinit 
+compinit
+
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 
-autoload -Uz compinit 
-compinit
+source <(kubectl completion zsh)
 
 #keybindings
 bindkey -e
-bindkey '^p' history-search-backward
-bindkey '^n' history-search-forward
+# bindkey '^p' history-search-backward
+# bindkey '^n' history-search-forward
+
+# Search history by the beginning of the command typed
+bindkey '^P' history-beginning-search-backward
+bindkey '^N' history-beginning-search-forward
 
 
 #history
@@ -35,6 +41,8 @@ setopt hist_find_no_dups
 
 # PATH
 export PATH="$HOME/.local/bin:$PATH"
+export PATH=$PATH:/usr/local/go/bin
+export PATH="$HOME/coding/CLI-SIMP/.tools/bin:$PATH"
 
 # grep
 alias grep='grep --color=auto'
